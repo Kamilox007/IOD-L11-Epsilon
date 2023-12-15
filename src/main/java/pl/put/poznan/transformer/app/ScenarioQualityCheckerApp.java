@@ -20,7 +20,7 @@ public class ScenarioQualityCheckerApp {
         scenario.addStep(new Step("Krok 3",null));
         scenario.addStep(new Step("Krok 4",null));
         scenario.addStep(new Step("Krok 5",null));
-        scenario.addStep(new Step("Krok 6",subscenario));
+        scenario.addStep(new Step("Krok 6", subscenario));
         ScenarioCheckerStepCounter counter = new ScenarioCheckerStepCounter();
         scenario.acceptChecker(counter);
 
