@@ -11,4 +11,8 @@ public class Step {
     public ConcreteScenario getSubScenario() {
         return subScenario;
     }
+
+    public String getContent() {
+        return content;
+    }
 }
