@@ -1,9 +1,11 @@
 package pl.put.poznan.transformer.app;
 
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import pl.put.poznan.transformer.logic.*;
 
-public class ScenarioQualityCheckerApp {
 
+//@SpringBootApplication(scanBasePackages = {"pl.put.poznan.transformer.rest"})
+public class ScenarioQualityCheckerApp {
     public static void main(String[] args) {
         ConcreteScenario scenario = new ConcreteScenario();
         scenario.addActor(new Actor("Meissner"));
@@ -25,8 +27,6 @@ public class ScenarioQualityCheckerApp {
         scenario.acceptChecker(keywordCounter);
         ScenarioCheckerNoActorInStep noActorInStep = new ScenarioCheckerNoActorInStep();
         scenario.acceptChecker(noActorInStep);
-
-
     }
 
 }

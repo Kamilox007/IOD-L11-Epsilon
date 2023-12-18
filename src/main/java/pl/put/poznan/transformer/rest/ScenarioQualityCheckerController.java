@@ -3,6 +3,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import pl.put.poznan.transformer.logic.MainScenario;
+import pl.put.poznan.transformer.logic.ScenarioCheckerStepCounter;
 
 import java.io.IOException;
 
@@ -22,12 +23,14 @@ public class ScenarioQualityCheckerController {
             JsonController unpack = new JsonController(name);
             mainScenario = unpack.unpackJson();
             logger.info("Successfully converted json to object");
+            ScenarioCheckerStepCounter counter = new ScenarioCheckerStepCounter();
+            mainScenario.getScenario().acceptChecker(counter);
         } catch (IOException e){
             logger.info("Requested scenario does not exist.");
-            return "Nie ma scenariusza o podanej nazwie.";
+            return "There's no scenario with such name.";
         } catch (NullPointerException e) {
             logger.info("Requested scenario that is invalid.");
-            return "Podany scenariusz nie jest poprawnie skonstruowany.";
+            return "This scenario isn't constructed properly.";
         }
         return mainScenario.getScenario().toString(); // tutaj wstawic odpowiedz metody
     }
@@ -43,10 +46,10 @@ public class ScenarioQualityCheckerController {
             logger.info("Successfully converted json to object");
         } catch (IOException e){
             logger.info("Requested scenario does not exist.");
-            return "Nie ma scenariusza o podanej nazwie.";
+            return "There's no scenario with such name.";
         } catch (NullPointerException e) {
             logger.info("Requested scenario that is invalid.");
-            return "Podany scenariusz nie jest poprawnie skonstruowany.";
+            return "This scenario isn't constructed properly.";
         }
         return "Wszystko git"; // tutaj wstawic odpowiedz metody
     }
@@ -63,10 +66,10 @@ public class ScenarioQualityCheckerController {
             logger.info("Successfully converted json to object");
         } catch (IOException e){
             logger.info("Requested scenario does not exist.");
-            return "Nie ma scenariusza o podanej nazwie.";
+            return "There's no scenario with such name.";
         } catch (NullPointerException e) {
             logger.info("Requested scenario that is invalid.");
-            return "Podany scenariusz nie jest poprawnie skonstruowany.";
+            return "This scenario isn't constructed properly.";
         }
         return "Wszystko git"; // tutaj wstawic odpowiedz metody
     }
