@@ -42,15 +42,13 @@ public class JsonController {
 
         JsonNode actors = rootNode.get("Actors");
         for (JsonNode objNode : actors){
-            Actor actor = new Actor();
-            actor.addName(objNode.toString());
+            Actor actor = new Actor(objNode.toString());
             mainScenario.addActor(actor);
         }
 
         actors = rootNode.get("System Actor");
         for (JsonNode objNode : actors){
-            Actor actor = new Actor();
-            actor.addName(objNode.toString());
+            Actor actor = new Actor(objNode.toString());
             mainScenario.addSystemActor(actor);
         }
 
