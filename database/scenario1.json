@@ -1,0 +1,34 @@
+{
+    "Title": "Dodanie ksiązki",
+    "Actors": ["Bibliotekarz", "Student_debil"],
+    "System Actor": ["System"],
+    "Scenario": [
+      {
+        "Content": "Krok 1",
+        "Steps": []
+      },
+      {
+        "Content": "Krok 2",
+        "Steps": [
+            {
+                "Content": "Krok 3",
+                "Steps": [      
+                  {
+                  "Content": "Krok 4",
+                  "Steps": [
+                      {
+                          "Content": "Krok 5",
+                          "Steps": []
+                      }
+                  ]
+                }
+              ]
+            }
+        ]
+      },
+      {
+        "Content": "Krok 6",
+        "Steps": []
+      }
+    ]
+  }

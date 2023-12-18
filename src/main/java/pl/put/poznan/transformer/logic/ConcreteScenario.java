@@ -21,8 +21,6 @@ public class ConcreteScenario implements Scenario {
         scenarioChecker.visitScenario(this);
     }
 
-
-
     public ArrayList<Actor> getActors() {
         return actors;
     }
