@@ -14,7 +14,6 @@ public class ScenarioCheckerNoActorInStep implements ScenarioChecker{
         }
 
     }
-
     private ArrayList<String> checkActors(ConcreteScenario scenario, ArrayList<Actor> listOfActors) {
         ArrayList<String> stepList = new ArrayList<>();
         int i = 1;
