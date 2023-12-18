@@ -32,7 +32,11 @@ public class MainScenario implements Scenario {
     public ConcreteScenario getScenario() { return scenario; }
     public void addScenario(ConcreteScenario Scenario) { scenario = Scenario; }
     @Override
-    public void acceptChecker(ScenarioChecker scenarioChecker) {
-        scenarioChecker.visitScenario(this.scenario);
+    public Integer acceptCheckerInt(ScenarioChecker scenarioChecker) {
+        return scenarioChecker.visitScenarioInt(this.scenario);
+    }
+    @Override
+    public ArrayList<String> acceptCheckerArrayList(ScenarioChecker scenarioChecker) {
+        return scenarioChecker.visitScenarioArrayList(this);
     }
 }

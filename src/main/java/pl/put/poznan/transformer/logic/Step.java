@@ -6,8 +6,8 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 @JsonFormat(shape = JsonFormat.Shape.ARRAY)
 @JsonPropertyOrder({"Content", "Steps"})
 public class Step {
-    private String content;
-    private ConcreteScenario subScenario;
+    private final String content;
+    private final ConcreteScenario subScenario;
 
     public Step(String text, ConcreteScenario subScenario) {
         content = text;

@@ -1,11 +1,16 @@
 package pl.put.poznan.transformer.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
 import pl.put.poznan.transformer.logic.*;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class JsonController {
 
@@ -26,8 +31,9 @@ public class JsonController {
         for (JsonNode steps : rootNode){
             JsonNode content = steps.get("Content");
             JsonNode step = steps.get("Steps");
+            String convertedContent = content.toString().substring(1, content.toString().length() - 1);
             ConcreteScenario subScenario = unpackScenario(step, objectMapper);
-            Step scenarioStep = new Step(null, subScenario);
+            Step scenarioStep = new Step(convertedContent, subScenario);
             scenario.addStep(scenarioStep);
         }
         return scenario;
@@ -42,13 +48,13 @@ public class JsonController {
 
         JsonNode actors = rootNode.get("Actors");
         for (JsonNode objNode : actors){
-            Actor actor = new Actor(objNode.toString());
+            Actor actor = new Actor(objNode.toString().substring(1, objNode.toString().length() - 1));
             mainScenario.addActor(actor);
         }
 
         actors = rootNode.get("System Actor");
         for (JsonNode objNode : actors){
-            Actor actor = new Actor(objNode.toString());
+            Actor actor = new Actor(objNode.toString().substring(1, objNode.toString().length() - 1));
             mainScenario.addSystemActor(actor);
         }
 
@@ -56,6 +62,32 @@ public class JsonController {
         ScenarioCheckerStepCounter counter = new ScenarioCheckerStepCounter();
 
         return mainScenario;
+    }
+
+    public String packJson(ArrayList<String> file) throws IOException, NullPointerException {
+        /*
+        Map<String, List<Map<String, String>>> packedJson = new HashMap<>();
+        List<Map<String, String>> wrongSteps = new ArrayList<>();
+        for (String step : file){
+            Map<String, String> map = new HashMap<>();
+            String[] splitStep = step.split(" ", 2);
+            map.put("Number", splitStep[0]);
+            map.put("Step content", splitStep[1]);
+            packedJson += ",\n";
+            wrongSteps.add(map);
+        }
+        packedJson.put("Wrong steps: ,\n", wrongSteps);
+        return packedJson;
+        */
+         String output = "{\n   \"Wrong steps\":[";
+         for (String step : file){
+             String[] splitStep = step.split(" ", 2);
+             output += "\n       {\n        " + "\"Step number\": \"" + splitStep[0] + "\",\n";
+             output += "        \"Step content\": \"" + splitStep[1] + "\"\n       },";
+         }
+         output = output.substring(0, output.length() - 1);
+         output += "\n   ]\n}";
+         return output;
     }
 
 }

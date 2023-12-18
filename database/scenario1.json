@@ -4,20 +4,20 @@
     "System Actor": ["System"],
     "Scenario": [
       {
-        "Content": "Krok 1",
+        "Content": "IF 1",
         "Steps": []
       },
       {
-        "Content": "Krok 2",
+        "Content": "Bibliotekarz zapala petardę",
         "Steps": [
             {
-                "Content": "Krok 3",
+                "Content": "IF 3",
                 "Steps": [      
                   {
-                  "Content": "Krok 4",
+                  "Content": "IF 4",
                   "Steps": [
                       {
-                          "Content": "Krok 5",
+                          "Content": "IF 5",
                           "Steps": []
                       }
                   ]
@@ -27,7 +27,7 @@
         ]
       },
       {
-        "Content": "Krok 6",
+        "Content": "IF 6",
         "Steps": []
       }
     ]

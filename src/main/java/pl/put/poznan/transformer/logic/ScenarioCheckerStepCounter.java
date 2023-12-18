@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class ScenarioCheckerStepCounter implements ScenarioChecker {
     @Override
-    public void visitScenario(ConcreteScenario scenario) {
-        System.out.println("Liczba kroków w tym scenariuszu: "+countSteps(scenario));
+    public Integer visitScenarioInt(ConcreteScenario scenario) {
+        return countSteps(scenario);
     }
+    @Override
+    public ArrayList<String> visitScenarioArrayList(MainScenario scenario) { return new ArrayList<>(); }
 
     private int countSteps(ConcreteScenario scenario) {
         ArrayList<Step> stepList = scenario.getSteps();

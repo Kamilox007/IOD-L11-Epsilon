@@ -4,16 +4,21 @@ import java.util.ArrayList;
 
 public class ScenarioCheckerNoActorInStep implements ScenarioChecker{
 
-
     @Override
-    public void visitScenario(ConcreteScenario scenario) {
-        ArrayList<Actor> listOfActors = scenario.getActors();
+    public ArrayList<String> visitScenarioArrayList(MainScenario mainScenario) {
+        ConcreteScenario scenario = mainScenario.getScenario();
+        ArrayList<Actor> listOfActors = mainScenario.getActors();
         ArrayList<String> actorlessSteps = checkActors(scenario,listOfActors);
         for (String step : actorlessSteps) {
             System.out.println(step);
         }
-
+        for (Actor actor : listOfActors){
+            System.out.println(actor.getName());
+        }
+        return checkActors(scenario,listOfActors);
     }
+    @Override
+    public Integer visitScenarioInt(ConcreteScenario scenario) { return 69; }
     private ArrayList<String> checkActors(ConcreteScenario scenario, ArrayList<Actor> listOfActors) {
         ArrayList<String> stepList = new ArrayList<>();
         int i = 1;
@@ -21,6 +26,7 @@ public class ScenarioCheckerNoActorInStep implements ScenarioChecker{
             for (Actor actor : listOfActors) {
                 if(!step.getContent().startsWith(actor.getName())) {
                     stepList.add(""+i+" "+step.getContent());
+                    break;
                 }
                 i++;
             }
