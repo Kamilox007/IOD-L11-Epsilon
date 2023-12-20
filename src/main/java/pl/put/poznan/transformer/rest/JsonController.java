@@ -80,6 +80,7 @@ public class JsonController {
         return packedJson;
         */
          String output = "{\n   \"Wrong steps\":[";
+         file.remove(file.size() - 1);
          for (String step : file){
              String[] splitStep = step.split(" ", 2);
              output += "\n       {\n        " + "\"Step number\": \"" + splitStep[0] + "\",\n";

@@ -31,14 +31,15 @@ public class ScenarioQualityCheckerController {
             logger.info("Successfully converted json to object");
             ScenarioCheckerStepCounter counter = new ScenarioCheckerStepCounter();
             answer = mainScenario.acceptCheckerInt(counter).toString();
-            logger.info("This scenario has " + answer + " steps.");
+            logger.debug("This scenario has " + answer + " steps.");
         } catch (IOException e){
-            logger.info("Requested scenario does not exist.");
+            logger.error("Requested scenario does not exist.");
             return "There's no scenario with such name.";
         } catch (NullPointerException e) {
-            logger.info("Requested scenario that is invalid.");
+            logger.error("Requested scenario that is invalid.");
             return "This scenario isn't constructed properly.";
         }
+        System.out.println();
         return answer;
     }
 
@@ -53,14 +54,16 @@ public class ScenarioQualityCheckerController {
             logger.info("Successfully converted json to object");
             ScenarioCheckerNoActorInStep counter = new ScenarioCheckerNoActorInStep();
             ArrayList<String> incorrectSteps = mainScenario.acceptCheckerArrayList(counter);
-            logger.info("Found " + incorrectSteps.size() + " incorrect steps in scenario");
+            Integer foundSteps = incorrectSteps.size() - 1;
+            logger.debug("Found " + foundSteps + " incorrect steps in scenario");
             answer = unpack.packJson(incorrectSteps);
             logger.info("Successfully converted object to Json file");
         } catch (IOException e){
-            logger.info("Requested scenario does not exist.");
+            logger.error("Requested scenario does not exist.");
         } catch (NullPointerException e) {
-            logger.info("Requested scenario that is invalid.");
+            logger.error("Requested scenario that is invalid.");
         }
+        System.out.println();
         return answer; // tutaj wstawic odpowiedz metody
     }
 
@@ -75,11 +78,14 @@ public class ScenarioQualityCheckerController {
             logger.info("Successfully converted json to object");
             ScenarioCheckerKeywordCounter counter = new ScenarioCheckerKeywordCounter();
             answer = mainScenario.acceptCheckerInt(counter).toString();
-            logger.info("This scenario has " + answer + " steps that begin with a keyword");
+            logger.debug("This scenario has " + answer + " steps that begin with a keyword");
         } catch (IOException e){
-            logger.info("Requested scenario does not exist.");
+            logger.error("Requested scenario does not exist.");
             return "There's no scenario with such name.";
+        } catch (NullPointerException e) {
+            logger.error("Requested scenario that is invalid.");
         }
+        System.out.println();
         return answer;
     }
 }

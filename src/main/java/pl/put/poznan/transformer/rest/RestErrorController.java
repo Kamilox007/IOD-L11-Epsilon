@@ -17,7 +17,8 @@ public class RestErrorController implements ErrorController {
     @RequestMapping("/error")
     @ResponseBody
     String error(HttpServletRequest request) {
-        logger.info("Received an invalid request");
+        logger.error("Received an invalid request");
+        System.out.println();
         return "Aplikacja nie obsługuje takiego zapytania";
     }
 

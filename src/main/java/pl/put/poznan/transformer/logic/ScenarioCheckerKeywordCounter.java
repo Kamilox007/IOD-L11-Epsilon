@@ -3,7 +3,7 @@ package pl.put.poznan.transformer.logic;
 import java.util.ArrayList;
 
 public class ScenarioCheckerKeywordCounter implements ScenarioChecker{
-    private String[] keywords = {"\"IF","\"ELSE","\"FOR EACH"}; //Leave it this way, believe me
+    private String[] keywords = {"IF","ELSE","FOR EACH"}; //Leave it this way, believe me
     @Override
     public Integer visitScenarioInt(ConcreteScenario scenario) {
         return checkKeywords(scenario);

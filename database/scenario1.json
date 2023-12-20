@@ -1,6 +1,6 @@
 {
     "Title": "Dodanie ksiązki",
-    "Actors": ["Bibliotekarz", "Student_debil"],
+    "Actors": ["Bibliotekarz", "Student"],
     "System Actor": ["System"],
     "Scenario": [
       {
@@ -11,10 +11,10 @@
         "Content": "Bibliotekarz zapala petardę",
         "Steps": [
             {
-                "Content": "IF 3",
+                "Content": "System popiera takie zachowanie",
                 "Steps": [      
                   {
-                  "Content": "IF 4",
+                  "Content": "Student przyłącza się do festiwalu",
                   "Steps": [
                       {
                           "Content": "IF 5",

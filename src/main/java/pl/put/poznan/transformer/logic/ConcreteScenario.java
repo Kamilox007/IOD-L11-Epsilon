@@ -11,7 +11,5 @@ public class ConcreteScenario {
     public ArrayList<Step> getSteps() {
         return steps;
     }
-    public void addStep(Step step) {
-        steps.add(step);
-    }
+    public void addStep(Step step) { steps.add(step); }
 }

@@ -8,32 +8,32 @@ public class ScenarioCheckerNoActorInStep implements ScenarioChecker{
     public ArrayList<String> visitScenarioArrayList(MainScenario mainScenario) {
         ConcreteScenario scenario = mainScenario.getScenario();
         ArrayList<Actor> listOfActors = mainScenario.getActors();
-        ArrayList<String> actorlessSteps = checkActors(scenario,listOfActors);
-        for (String step : actorlessSteps) {
-            System.out.println(step);
-        }
-        for (Actor actor : listOfActors){
-            System.out.println(actor.getName());
-        }
-        return checkActors(scenario,listOfActors);
+        listOfActors.addAll(mainScenario.getSystemActors());
+        return checkActors(scenario,listOfActors, 1);
     }
     @Override
     public Integer visitScenarioInt(ConcreteScenario scenario) { return 69; }
-    private ArrayList<String> checkActors(ConcreteScenario scenario, ArrayList<Actor> listOfActors) {
+    private ArrayList<String> checkActors(ConcreteScenario scenario, ArrayList<Actor> listOfActors, Integer i) {
         ArrayList<String> stepList = new ArrayList<>();
-        int i = 1;
         for (Step step : scenario.getSteps()) {
-            for (Actor actor : listOfActors) {
-                if(!step.getContent().startsWith(actor.getName())) {
-                    stepList.add(""+i+" "+step.getContent());
-                    break;
-                }
-                i++;
-            }
-            if(step.getSubScenario()!=null) {
-                stepList.addAll(checkActors(step.getSubScenario(),listOfActors));
+            if (lackOfActor(step, listOfActors))
+                stepList.add("" + i + " " + step.getContent());
+            i++;
+
+            if (step.getSubScenario() != null) {
+                stepList.addAll(checkActors(step.getSubScenario(), listOfActors, i));
+                i = Integer.parseInt(stepList.get(stepList.size() - 1)); // rozpakowujemy ile krokow przeszedl podscenariusz
+                stepList.remove(stepList.size() - 1); // usuwamy z listy pomocniczą liczbę
             }
         }
+        stepList.add(i.toString()); //Dodajemy liczbę kroków na koniec
         return stepList;
+    }
+
+    private boolean lackOfActor(Step step, ArrayList<Actor> listOfActors){
+        for (Actor actor : listOfActors)
+            if (step.getContent().startsWith(actor.getName()))
+                return false;
+        return true;
     }
 }
