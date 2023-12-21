@@ -8,7 +8,7 @@
 -source
 '11'
 -sourcepath
-'D:/Studia/Projekty/IO/IOD-L11-Epsilon/src/main/java'
+'D:/Studia/Projekty/IO/IOD-L11-Epsilon/src/main/java;D:/Studia/Projekty/IO/IOD-L11-Epsilon/target/generated-sources/annotations'
 -author
 -bottom
 'Copyright &#169; 2023. All rights reserved.'
@@ -19,14 +19,14 @@
 -docencoding
 'UTF-8'
 -doctitle
-'io-project-architecture 1.0.0 API'
+'io-project-architecture 1.1.0 API'
 -linkoffline
 'https://docs.oracle.com/en/java/javase/11/docs/api' 'D:/Studia/Projekty/IO/IOD-L11-Epsilon/target/javadoc-bundle-options'
 -nohelp
 -use
 -version
 -windowtitle
-'io-project-architecture 1.0.0 API'
+'io-project-architecture 1.1.0 API'
 pl.put.poznan.transformer.app
 pl.put.poznan.transformer.logic
 pl.put.poznan.transformer.rest
@@ -133,19 +133,20 @@ C:\Users\Grzegorz\.m2\repository\org\springframework\spring-core\5.2.8.RELEASE\s
 C:\Users\Grzegorz\.m2\repository\org\springframework\spring-jcl\5.2.8.RELEASE\spring-jcl-5.2.8.RELEASE.jar = 1701971946185
 C:\Users\Grzegorz\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar = 1701971946866
 D:\Studia\Projekty\IO\IOD-L11-Epsilon\src\main\java = 1703149176586
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\allclasses-index.html = 1703151675755
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\allpackages-index.html = 1703151675758
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\element-list = 1703151675635
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\index-all.html = 1703151675788
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\index.html = 1703151675734
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\jquery-ui.overrides.css = 1703151675810
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\member-search-index.js = 1703151675764
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\module-search-index.js = 1703151675760
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\overview-summary.html = 1703151675792
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\overview-tree.html = 1703151675730
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\package-search-index.js = 1703151675761
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\script.js = 1703151675796
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\search.js = 1703151675799
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\stylesheet.css = 1703151675794
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\tag-search-index.js = 1703151675765
-D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\type-search-index.js = 1703151675763
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\target\generated-sources\annotations = 1703149685427
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\allclasses-index.html = 1703156510936
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\allpackages-index.html = 1703156510940
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\element-list = 1703156510760
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\index-all.html = 1703156510975
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\index.html = 1703156510903
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\jquery-ui.overrides.css = 1703156511000
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\member-search-index.js = 1703156510947
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\module-search-index.js = 1703156510943
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\overview-summary.html = 1703156510980
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\overview-tree.html = 1703156510897
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\package-search-index.js = 1703156510944
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\script.js = 1703156510984
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\search.js = 1703156510987
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\stylesheet.css = 1703156510982
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\tag-search-index.js = 1703156510948
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\type-search-index.js = 1703156510945
