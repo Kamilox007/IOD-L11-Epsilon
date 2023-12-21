@@ -1,0 +1,151 @@
+@options
+@packages
+-classpath
+'C:/Users/Grzegorz/.m2/repository/org/springframework/boot/spring-boot-starter-web/2.3.3.RELEASE/spring-boot-starter-web-2.3.3.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/boot/spring-boot-starter/2.3.3.RELEASE/spring-boot-starter-2.3.3.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/boot/spring-boot/2.3.3.RELEASE/spring-boot-2.3.3.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/boot/spring-boot-autoconfigure/2.3.3.RELEASE/spring-boot-autoconfigure-2.3.3.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/boot/spring-boot-starter-logging/2.3.3.RELEASE/spring-boot-starter-logging-2.3.3.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/ch/qos/logback/logback-classic/1.2.3/logback-classic-1.2.3.jar;C:/Users/Grzegorz/.m2/repository/ch/qos/logback/logback-core/1.2.3/logback-core-1.2.3.jar;C:/Users/Grzegorz/.m2/repository/org/apache/logging/log4j/log4j-to-slf4j/2.13.3/log4j-to-slf4j-2.13.3.jar;C:/Users/Grzegorz/.m2/repository/org/apache/logging/log4j/log4j-api/2.13.3/log4j-api-2.13.3.jar;C:/Users/Grzegorz/.m2/repository/org/slf4j/jul-to-slf4j/1.7.30/jul-to-slf4j-1.7.30.jar;C:/Users/Grzegorz/.m2/repository/jakarta/annotation/jakarta.annotation-api/1.3.5/jakarta.annotation-api-1.3.5.jar;C:/Users/Grzegorz/.m2/repository/org/yaml/snakeyaml/1.26/snakeyaml-1.26.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/boot/spring-boot-starter-json/2.3.3.RELEASE/spring-boot-starter-json-2.3.3.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.11.2/jackson-databind-2.11.2.jar;C:/Users/Grzegorz/.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.11.2/jackson-annotations-2.11.2.jar;C:/Users/Grzegorz/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.11.2/jackson-core-2.11.2.jar;C:/Users/Grzegorz/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jdk8/2.11.2/jackson-datatype-jdk8-2.11.2.jar;C:/Users/Grzegorz/.m2/repository/com/fasterxml/jackson/datatype/jackson-datatype-jsr310/2.11.2/jackson-datatype-jsr310-2.11.2.jar;C:/Users/Grzegorz/.m2/repository/com/fasterxml/jackson/module/jackson-module-parameter-names/2.11.2/jackson-module-parameter-names-2.11.2.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/boot/spring-boot-starter-tomcat/2.3.3.RELEASE/spring-boot-starter-tomcat-2.3.3.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/org/apache/tomcat/embed/tomcat-embed-core/9.0.37/tomcat-embed-core-9.0.37.jar;C:/Users/Grzegorz/.m2/repository/org/glassfish/jakarta.el/3.0.3/jakarta.el-3.0.3.jar;C:/Users/Grzegorz/.m2/repository/org/apache/tomcat/embed/tomcat-embed-websocket/9.0.37/tomcat-embed-websocket-9.0.37.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/spring-web/5.2.8.RELEASE/spring-web-5.2.8.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/spring-beans/5.2.8.RELEASE/spring-beans-5.2.8.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/spring-webmvc/5.2.8.RELEASE/spring-webmvc-5.2.8.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/spring-aop/5.2.8.RELEASE/spring-aop-5.2.8.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/spring-context/5.2.8.RELEASE/spring-context-5.2.8.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/spring-expression/5.2.8.RELEASE/spring-expression-5.2.8.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/com/googlecode/json-simple/json-simple/1.1.1/json-simple-1.1.1.jar;C:/Users/Grzegorz/.m2/repository/junit/junit/4.13/junit-4.13.jar;C:/Users/Grzegorz/.m2/repository/org/hamcrest/hamcrest-core/2.2/hamcrest-core-2.2.jar;C:/Users/Grzegorz/.m2/repository/com/google/code/gson/gson/2.8.8/gson-2.8.8.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/plugins/maven-javadoc-plugin/3.3.1/maven-javadoc-plugin-3.3.1.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/maven-core/3.0/maven-core-3.0.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/maven-settings-builder/3.0/maven-settings-builder-3.0.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/maven-repository-metadata/3.0/maven-repository-metadata-3.0.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/maven-model-builder/3.0/maven-model-builder-3.0.jar;C:/Users/Grzegorz/.m2/repository/org/sonatype/aether/aether-impl/1.7/aether-impl-1.7.jar;C:/Users/Grzegorz/.m2/repository/org/sonatype/aether/aether-spi/1.7/aether-spi-1.7.jar;C:/Users/Grzegorz/.m2/repository/org/sonatype/aether/aether-api/1.7/aether-api-1.7.jar;C:/Users/Grzegorz/.m2/repository/org/sonatype/aether/aether-util/1.7/aether-util-1.7.jar;C:/Users/Grzegorz/.m2/repository/org/sonatype/sisu/sisu-inject-plexus/1.4.2/sisu-inject-plexus-1.4.2.jar;C:/Users/Grzegorz/.m2/repository/org/sonatype/sisu/sisu-inject-bean/1.4.2/sisu-inject-bean-1.4.2.jar;C:/Users/Grzegorz/.m2/repository/org/sonatype/sisu/sisu-guice/2.1.7/sisu-guice-2.1.7-noaop.jar;C:/Users/Grzegorz/.m2/repository/org/codehaus/plexus/plexus-interpolation/1.14/plexus-interpolation-1.14.jar;C:/Users/Grzegorz/.m2/repository/org/codehaus/plexus/plexus-classworlds/2.2.3/plexus-classworlds-2.2.3.jar;C:/Users/Grzegorz/.m2/repository/org/codehaus/plexus/plexus-component-annotations/1.5.5/plexus-component-annotations-1.5.5.jar;C:/Users/Grzegorz/.m2/repository/org/sonatype/plexus/plexus-sec-dispatcher/1.3/plexus-sec-dispatcher-1.3.jar;C:/Users/Grzegorz/.m2/repository/org/sonatype/plexus/plexus-cipher/1.4/plexus-cipher-1.4.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/maven-model/3.0/maven-model-3.0.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/maven-settings/3.0/maven-settings-3.0.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/maven-plugin-api/3.0/maven-plugin-api-3.0.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/maven-artifact/3.0/maven-artifact-3.0.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/reporting/maven-reporting-api/3.0/maven-reporting-api-3.0.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/maven-archiver/3.5.1/maven-archiver-3.5.1.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/shared/maven-shared-utils/3.3.3/maven-shared-utils-3.3.3.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/shared/maven-invoker/3.1.0/maven-invoker-3.1.0.jar;C:/Users/Grzegorz/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/shared/maven-common-artifact-filters/3.1.1/maven-common-artifact-filters-3.1.1.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/shared/maven-artifact-transfer/0.13.1/maven-artifact-transfer-0.13.1.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/doxia/doxia-sink-api/1.9.1/doxia-sink-api-1.9.1.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/doxia/doxia-logging-api/1.9.1/doxia-logging-api-1.9.1.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/doxia/doxia-site-renderer/1.9.2/doxia-site-renderer-1.9.2.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/doxia/doxia-core/1.9.1/doxia-core-1.9.1.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/doxia/doxia-decoration-model/1.9.2/doxia-decoration-model-1.9.2.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/doxia/doxia-skin-model/1.9.2/doxia-skin-model-1.9.2.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/doxia/doxia-module-xhtml/1.9.1/doxia-module-xhtml-1.9.1.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/doxia/doxia-module-xhtml5/1.9.1/doxia-module-xhtml5-1.9.1.jar;C:/Users/Grzegorz/.m2/repository/org/codehaus/plexus/plexus-i18n/1.0-beta-10/plexus-i18n-1.0-beta-10.jar;C:/Users/Grzegorz/.m2/repository/org/codehaus/plexus/plexus-container-default/1.0-alpha-30/plexus-container-default-1.0-alpha-30.jar;C:/Users/Grzegorz/.m2/repository/org/codehaus/plexus/plexus-velocity/1.2/plexus-velocity-1.2.jar;C:/Users/Grzegorz/.m2/repository/org/apache/velocity/velocity/1.7/velocity-1.7.jar;C:/Users/Grzegorz/.m2/repository/commons-lang/commons-lang/2.4/commons-lang-2.4.jar;C:/Users/Grzegorz/.m2/repository/org/apache/velocity/velocity-tools/2.0/velocity-tools-2.0.jar;C:/Users/Grzegorz/.m2/repository/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar;C:/Users/Grzegorz/.m2/repository/commons-digester/commons-digester/1.8/commons-digester-1.8.jar;C:/Users/Grzegorz/.m2/repository/commons-chain/commons-chain/1.1/commons-chain-1.1.jar;C:/Users/Grzegorz/.m2/repository/commons-logging/commons-logging/1.1/commons-logging-1.1.jar;C:/Users/Grzegorz/.m2/repository/dom4j/dom4j/1.1/dom4j-1.1.jar;C:/Users/Grzegorz/.m2/repository/oro/oro/2.0.8/oro-2.0.8.jar;C:/Users/Grzegorz/.m2/repository/commons-collections/commons-collections/3.2.2/commons-collections-3.2.2.jar;C:/Users/Grzegorz/.m2/repository/org/apache/maven/wagon/wagon-provider-api/2.4/wagon-provider-api-2.4.jar;C:/Users/Grzegorz/.m2/repository/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.jar;C:/Users/Grzegorz/.m2/repository/org/apache/commons/commons-text/1.9/commons-text-1.9.jar;C:/Users/Grzegorz/.m2/repository/org/apache/httpcomponents/httpclient/4.5.12/httpclient-4.5.12.jar;C:/Users/Grzegorz/.m2/repository/commons-codec/commons-codec/1.14/commons-codec-1.14.jar;C:/Users/Grzegorz/.m2/repository/org/apache/httpcomponents/httpcore/4.4.13/httpcore-4.4.13.jar;C:/Users/Grzegorz/.m2/repository/com/thoughtworks/qdox/qdox/2.0.0/qdox-2.0.0.jar;C:/Users/Grzegorz/.m2/repository/org/codehaus/plexus/plexus-java/1.1.0/plexus-java-1.1.0.jar;C:/Users/Grzegorz/.m2/repository/org/ow2/asm/asm/9.2/asm-9.2.jar;C:/Users/Grzegorz/.m2/repository/org/codehaus/plexus/plexus-archiver/4.2.5/plexus-archiver-4.2.5.jar;C:/Users/Grzegorz/.m2/repository/org/apache/commons/commons-compress/1.20/commons-compress-1.20.jar;C:/Users/Grzegorz/.m2/repository/org/iq80/snappy/snappy/0.4/snappy-0.4.jar;C:/Users/Grzegorz/.m2/repository/org/codehaus/plexus/plexus-io/3.2.0/plexus-io-3.2.0.jar;C:/Users/Grzegorz/.m2/repository/org/codehaus/plexus/plexus-utils/3.3.0/plexus-utils-3.3.0.jar;C:/Users/Grzegorz/.m2/repository/commons-io/commons-io/2.8.0/commons-io-2.8.0.jar;C:/Users/Grzegorz/.m2/repository/org/codehaus/plexus/plexus-interactivity-api/1.0/plexus-interactivity-api-1.0.jar;C:/Users/Grzegorz/.m2/repository/org/hamcrest/hamcrest/2.2/hamcrest-2.2.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/spring-core/5.2.8.RELEASE/spring-core-5.2.8.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/org/springframework/spring-jcl/5.2.8.RELEASE/spring-jcl-5.2.8.RELEASE.jar;C:/Users/Grzegorz/.m2/repository/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.jar'
+-encoding
+'UTF-8'
+-public
+-source
+'11'
+-sourcepath
+'D:/Studia/Projekty/IO/IOD-L11-Epsilon/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2023. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'D:/Studia/Projekty/IO/IOD-L11-Epsilon/docs'
+-docencoding
+'UTF-8'
+-doctitle
+'io-project-architecture 1.0.0 API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'D:/Studia/Projekty/IO/IOD-L11-Epsilon/target/javadoc-bundle-options'
+-nohelp
+-use
+-version
+-windowtitle
+'io-project-architecture 1.0.0 API'
+pl.put.poznan.transformer.app
+pl.put.poznan.transformer.logic
+pl.put.poznan.transformer.rest
+C:\Users\Grzegorz\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.3.3.RELEASE\spring-boot-starter-web-2.3.3.RELEASE.jar = 1701971929191
+C:\Users\Grzegorz\.m2\repository\org\springframework\boot\spring-boot-starter\2.3.3.RELEASE\spring-boot-starter-2.3.3.RELEASE.jar = 1701971944580
+C:\Users\Grzegorz\.m2\repository\org\springframework\boot\spring-boot\2.3.3.RELEASE\spring-boot-2.3.3.RELEASE.jar = 1701971944802
+C:\Users\Grzegorz\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\2.3.3.RELEASE\spring-boot-autoconfigure-2.3.3.RELEASE.jar = 1701971945159
+C:\Users\Grzegorz\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.3.3.RELEASE\spring-boot-starter-logging-2.3.3.RELEASE.jar = 1701971930483
+C:\Users\Grzegorz\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar = 1701971930566
+C:\Users\Grzegorz\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar = 1701971930695
+C:\Users\Grzegorz\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.13.3\log4j-to-slf4j-2.13.3.jar = 1701971930893
+C:\Users\Grzegorz\.m2\repository\org\apache\logging\log4j\log4j-api\2.13.3\log4j-api-2.13.3.jar = 1701971931446
+C:\Users\Grzegorz\.m2\repository\org\slf4j\jul-to-slf4j\1.7.30\jul-to-slf4j-1.7.30.jar = 1701971931468
+C:\Users\Grzegorz\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar = 1701971940013
+C:\Users\Grzegorz\.m2\repository\org\yaml\snakeyaml\1.26\snakeyaml-1.26.jar = 1701971932166
+C:\Users\Grzegorz\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.3.3.RELEASE\spring-boot-starter-json-2.3.3.RELEASE.jar = 1701971932243
+C:\Users\Grzegorz\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.11.2\jackson-databind-2.11.2.jar = 1701971940616
+C:\Users\Grzegorz\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.11.2\jackson-annotations-2.11.2.jar = 1701971939678
+C:\Users\Grzegorz\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.11.2\jackson-core-2.11.2.jar = 1701971939911
+C:\Users\Grzegorz\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.11.2\jackson-datatype-jdk8-2.11.2.jar = 1701971939325
+C:\Users\Grzegorz\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.11.2\jackson-datatype-jsr310-2.11.2.jar = 1701971939622
+C:\Users\Grzegorz\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.11.2\jackson-module-parameter-names-2.11.2.jar = 1701971939820
+C:\Users\Grzegorz\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\2.3.3.RELEASE\spring-boot-starter-tomcat-2.3.3.RELEASE.jar = 1701971939985
+C:\Users\Grzegorz\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\9.0.37\tomcat-embed-core-9.0.37.jar = 1701971942082
+C:\Users\Grzegorz\.m2\repository\org\glassfish\jakarta.el\3.0.3\jakarta.el-3.0.3.jar = 1701971940185
+C:\Users\Grzegorz\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\9.0.37\tomcat-embed-websocket-9.0.37.jar = 1701971940305
+C:\Users\Grzegorz\.m2\repository\org\springframework\spring-web\5.2.8.RELEASE\spring-web-5.2.8.RELEASE.jar = 1701971945107
+C:\Users\Grzegorz\.m2\repository\org\springframework\spring-beans\5.2.8.RELEASE\spring-beans-5.2.8.RELEASE.jar = 1701971943335
+C:\Users\Grzegorz\.m2\repository\org\springframework\spring-webmvc\5.2.8.RELEASE\spring-webmvc-5.2.8.RELEASE.jar = 1701971942851
+C:\Users\Grzegorz\.m2\repository\org\springframework\spring-aop\5.2.8.RELEASE\spring-aop-5.2.8.RELEASE.jar = 1701971943043
+C:\Users\Grzegorz\.m2\repository\org\springframework\spring-context\5.2.8.RELEASE\spring-context-5.2.8.RELEASE.jar = 1701971943856
+C:\Users\Grzegorz\.m2\repository\org\springframework\spring-expression\5.2.8.RELEASE\spring-expression-5.2.8.RELEASE.jar = 1701971944043
+C:\Users\Grzegorz\.m2\repository\com\googlecode\json-simple\json-simple\1.1.1\json-simple-1.1.1.jar = 1703149276919
+C:\Users\Grzegorz\.m2\repository\junit\junit\4.13\junit-4.13.jar = 1703149282748
+C:\Users\Grzegorz\.m2\repository\org\hamcrest\hamcrest-core\2.2\hamcrest-core-2.2.jar = 1703149277262
+C:\Users\Grzegorz\.m2\repository\com\google\code\gson\gson\2.8.8\gson-2.8.8.jar = 1703149277720
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\plugins\maven-javadoc-plugin\3.3.1\maven-javadoc-plugin-3.3.1.jar = 1703149278456
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\maven-core\3.0\maven-core-3.0.jar = 1700743273244
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\maven-settings-builder\3.0\maven-settings-builder-3.0.jar = 1700743273462
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\maven-repository-metadata\3.0\maven-repository-metadata-3.0.jar = 1700743273126
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\maven-model-builder\3.0\maven-model-builder-3.0.jar = 1700743273164
+C:\Users\Grzegorz\.m2\repository\org\sonatype\aether\aether-impl\1.7\aether-impl-1.7.jar = 1700743273211
+C:\Users\Grzegorz\.m2\repository\org\sonatype\aether\aether-spi\1.7\aether-spi-1.7.jar = 1700743273209
+C:\Users\Grzegorz\.m2\repository\org\sonatype\aether\aether-api\1.7\aether-api-1.7.jar = 1700743273264
+C:\Users\Grzegorz\.m2\repository\org\sonatype\aether\aether-util\1.7\aether-util-1.7.jar = 1700743273070
+C:\Users\Grzegorz\.m2\repository\org\sonatype\sisu\sisu-inject-plexus\1.4.2\sisu-inject-plexus-1.4.2.jar = 1700743273262
+C:\Users\Grzegorz\.m2\repository\org\sonatype\sisu\sisu-inject-bean\1.4.2\sisu-inject-bean-1.4.2.jar = 1700743273338
+C:\Users\Grzegorz\.m2\repository\org\sonatype\sisu\sisu-guice\2.1.7\sisu-guice-2.1.7-noaop.jar = 1700743273388
+C:\Users\Grzegorz\.m2\repository\org\codehaus\plexus\plexus-interpolation\1.14\plexus-interpolation-1.14.jar = 1700743273320
+C:\Users\Grzegorz\.m2\repository\org\codehaus\plexus\plexus-classworlds\2.2.3\plexus-classworlds-2.2.3.jar = 1700743273341
+C:\Users\Grzegorz\.m2\repository\org\codehaus\plexus\plexus-component-annotations\1.5.5\plexus-component-annotations-1.5.5.jar = 1700743255570
+C:\Users\Grzegorz\.m2\repository\org\sonatype\plexus\plexus-sec-dispatcher\1.3\plexus-sec-dispatcher-1.3.jar = 1700743273344
+C:\Users\Grzegorz\.m2\repository\org\sonatype\plexus\plexus-cipher\1.4\plexus-cipher-1.4.jar = 1700743273392
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\maven-model\3.0\maven-model-3.0.jar = 1700743273434
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\maven-settings\3.0\maven-settings-3.0.jar = 1700743273425
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\maven-plugin-api\3.0\maven-plugin-api-3.0.jar = 1700743273431
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\maven-artifact\3.0\maven-artifact-3.0.jar = 1700743273048
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\reporting\maven-reporting-api\3.0\maven-reporting-api-3.0.jar = 1700743273032
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\maven-archiver\3.5.1\maven-archiver-3.5.1.jar = 1703149278157
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\shared\maven-shared-utils\3.3.3\maven-shared-utils-3.3.3.jar = 1703149279795
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\shared\maven-invoker\3.1.0\maven-invoker-3.1.0.jar = 1703149279412
+C:\Users\Grzegorz\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar = 1701971965702
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\shared\maven-common-artifact-filters\3.1.1\maven-common-artifact-filters-3.1.1.jar = 1703149279524
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\shared\maven-artifact-transfer\0.13.1\maven-artifact-transfer-0.13.1.jar = 1703149279941
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\doxia\doxia-sink-api\1.9.1\doxia-sink-api-1.9.1.jar = 1703149281883
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\doxia\doxia-logging-api\1.9.1\doxia-logging-api-1.9.1.jar = 1703149280327
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\doxia\doxia-site-renderer\1.9.2\doxia-site-renderer-1.9.2.jar = 1703149280213
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\doxia\doxia-core\1.9.1\doxia-core-1.9.1.jar = 1703149281599
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\doxia\doxia-decoration-model\1.9.2\doxia-decoration-model-1.9.2.jar = 1703149280910
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\doxia\doxia-skin-model\1.9.2\doxia-skin-model-1.9.2.jar = 1703149281225
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\doxia\doxia-module-xhtml\1.9.1\doxia-module-xhtml-1.9.1.jar = 1703149281343
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\doxia\doxia-module-xhtml5\1.9.1\doxia-module-xhtml5-1.9.1.jar = 1703149281667
+C:\Users\Grzegorz\.m2\repository\org\codehaus\plexus\plexus-i18n\1.0-beta-10\plexus-i18n-1.0-beta-10.jar = 1703149281788
+C:\Users\Grzegorz\.m2\repository\org\codehaus\plexus\plexus-container-default\1.0-alpha-30\plexus-container-default-1.0-alpha-30.jar = 1700743273522
+C:\Users\Grzegorz\.m2\repository\org\codehaus\plexus\plexus-velocity\1.2\plexus-velocity-1.2.jar = 1703149282232
+C:\Users\Grzegorz\.m2\repository\org\apache\velocity\velocity\1.7\velocity-1.7.jar = 1703149283606
+C:\Users\Grzegorz\.m2\repository\commons-lang\commons-lang\2.4\commons-lang-2.4.jar = 1703149283553
+C:\Users\Grzegorz\.m2\repository\org\apache\velocity\velocity-tools\2.0\velocity-tools-2.0.jar = 1700743274028
+C:\Users\Grzegorz\.m2\repository\commons-beanutils\commons-beanutils\1.7.0\commons-beanutils-1.7.0.jar = 1700743274027
+C:\Users\Grzegorz\.m2\repository\commons-digester\commons-digester\1.8\commons-digester-1.8.jar = 1700743274077
+C:\Users\Grzegorz\.m2\repository\commons-chain\commons-chain\1.1\commons-chain-1.1.jar = 1700743274059
+C:\Users\Grzegorz\.m2\repository\commons-logging\commons-logging\1.1\commons-logging-1.1.jar = 1703149283892
+C:\Users\Grzegorz\.m2\repository\dom4j\dom4j\1.1\dom4j-1.1.jar = 1700743274212
+C:\Users\Grzegorz\.m2\repository\oro\oro\2.0.8\oro-2.0.8.jar = 1700743274419
+C:\Users\Grzegorz\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar = 1703149284542
+C:\Users\Grzegorz\.m2\repository\org\apache\maven\wagon\wagon-provider-api\2.4\wagon-provider-api-2.4.jar = 1703149284437
+C:\Users\Grzegorz\.m2\repository\org\apache\commons\commons-lang3\3.10\commons-lang3-3.10.jar = 1703149284757
+C:\Users\Grzegorz\.m2\repository\org\apache\commons\commons-text\1.9\commons-text-1.9.jar = 1703149285354
+C:\Users\Grzegorz\.m2\repository\org\apache\httpcomponents\httpclient\4.5.12\httpclient-4.5.12.jar = 1701971965286
+C:\Users\Grzegorz\.m2\repository\commons-codec\commons-codec\1.14\commons-codec-1.14.jar = 1703149286311
+C:\Users\Grzegorz\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar = 1701971965419
+C:\Users\Grzegorz\.m2\repository\com\thoughtworks\qdox\qdox\2.0.0\qdox-2.0.0.jar = 1703149286134
+C:\Users\Grzegorz\.m2\repository\org\codehaus\plexus\plexus-java\1.1.0\plexus-java-1.1.0.jar = 1703149285876
+C:\Users\Grzegorz\.m2\repository\org\ow2\asm\asm\9.2\asm-9.2.jar = 1703149286906
+C:\Users\Grzegorz\.m2\repository\org\codehaus\plexus\plexus-archiver\4.2.5\plexus-archiver-4.2.5.jar = 1703149287554
+C:\Users\Grzegorz\.m2\repository\org\apache\commons\commons-compress\1.20\commons-compress-1.20.jar = 1703149288255
+C:\Users\Grzegorz\.m2\repository\org\iq80\snappy\snappy\0.4\snappy-0.4.jar = 1701971977196
+C:\Users\Grzegorz\.m2\repository\org\codehaus\plexus\plexus-io\3.2.0\plexus-io-3.2.0.jar = 1701971977174
+C:\Users\Grzegorz\.m2\repository\org\codehaus\plexus\plexus-utils\3.3.0\plexus-utils-3.3.0.jar = 1701971977315
+C:\Users\Grzegorz\.m2\repository\commons-io\commons-io\2.8.0\commons-io-2.8.0.jar = 1703149288412
+C:\Users\Grzegorz\.m2\repository\org\codehaus\plexus\plexus-interactivity-api\1.0\plexus-interactivity-api-1.0.jar = 1703149288060
+C:\Users\Grzegorz\.m2\repository\org\hamcrest\hamcrest\2.2\hamcrest-2.2.jar = 1701971945182
+C:\Users\Grzegorz\.m2\repository\org\springframework\spring-core\5.2.8.RELEASE\spring-core-5.2.8.RELEASE.jar = 1701971947100
+C:\Users\Grzegorz\.m2\repository\org\springframework\spring-jcl\5.2.8.RELEASE\spring-jcl-5.2.8.RELEASE.jar = 1701971946185
+C:\Users\Grzegorz\.m2\repository\org\slf4j\slf4j-api\1.7.30\slf4j-api-1.7.30.jar = 1701971946866
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\src\main\java = 1703149176586
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\allclasses-index.html = 1703151675755
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\allpackages-index.html = 1703151675758
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\element-list = 1703151675635
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\index-all.html = 1703151675788
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\index.html = 1703151675734
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\jquery-ui.overrides.css = 1703151675810
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\member-search-index.js = 1703151675764
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\module-search-index.js = 1703151675760
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\overview-summary.html = 1703151675792
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\overview-tree.html = 1703151675730
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\package-search-index.js = 1703151675761
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\script.js = 1703151675796
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\search.js = 1703151675799
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\stylesheet.css = 1703151675794
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\tag-search-index.js = 1703151675765
+D:\Studia\Projekty\IO\IOD-L11-Epsilon\docs\type-search-index.js = 1703151675763
