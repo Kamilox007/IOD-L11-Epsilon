@@ -39,4 +39,14 @@ public class MainScenario implements Scenario {
     public ArrayList<String> acceptCheckerArrayList(ScenarioChecker scenarioChecker) {
         return scenarioChecker.visitScenarioArrayList(this);
     }
+
+    @Override
+    public String acceptCheckerString(ScenarioChecker scenarioChecker) {
+        return  scenarioChecker.visitScenarioString(this);
+    }
+
+    @Override
+    public String acceptCheckerStringDepth(ScenarioChecker scenarioChecker, int maxDepth) {
+        return scenarioChecker.visitScenarioStringDepthVariant(this, maxDepth);
+    }
 }

@@ -2,10 +2,7 @@ package pl.put.poznan.transformer.rest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
-import pl.put.poznan.transformer.logic.MainScenario;
-import pl.put.poznan.transformer.logic.ScenarioCheckerKeywordCounter;
-import pl.put.poznan.transformer.logic.ScenarioCheckerNoActorInStep;
-import pl.put.poznan.transformer.logic.ScenarioCheckerStepCounter;
+import pl.put.poznan.transformer.logic.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -76,9 +73,51 @@ public class ScenarioQualityCheckerController {
             JsonController unpack = new JsonController(name);
             mainScenario = unpack.unpackJson();
             logger.info("Successfully converted json to object");
-            ScenarioCheckerKeywordCounter counter = new ScenarioCheckerKeywordCounter();
+            ScenarioCheckerStringReturner counter = new ScenarioCheckerStringReturner();
             answer = mainScenario.acceptCheckerInt(counter).toString();
             logger.debug("This scenario has " + answer + " steps that begin with a keyword");
+        } catch (IOException e){
+            logger.error("Requested scenario does not exist.");
+            return "There's no scenario with such name.";
+        } catch (NullPointerException e) {
+            logger.error("Requested scenario that is invalid.");
+        }
+        System.out.println();
+        return answer;
+    }
+
+    @RequestMapping(value="/ToString/{name}", method = RequestMethod.GET, produces = "application/json")
+    public String getScenarioString(@PathVariable String name) {
+        logger.info("Received a 'ToString' request, file name: " + name);
+        String answer = "Nah";
+        try{
+            MainScenario mainScenario = new MainScenario();
+            JsonController unpack = new JsonController(name);
+            mainScenario = unpack.unpackJson();
+            logger.info("Successfully converted json to object");
+            ScenarioCheckerStringReturner stringer = new ScenarioCheckerStringReturner();
+            answer = mainScenario.acceptCheckerString(stringer);
+        } catch (IOException e){
+            logger.error("Requested scenario does not exist.");
+            return "There's no scenario with such name.";
+        } catch (NullPointerException e) {
+            logger.error("Requested scenario that is invalid.");
+        }
+        System.out.println();
+        return answer;
+    }
+
+    @RequestMapping(value="/ToStringDepth/{name}/{depth}", method = RequestMethod.GET, produces = "application/json")
+    public String getScenarioString(@PathVariable String name, @PathVariable int depth) {
+        logger.info("Received a 'ToStringDepth' request, file name: " + name);
+        String answer = "Nah";
+        try{
+            MainScenario mainScenario;
+            JsonController unpack = new JsonController(name);
+            mainScenario = unpack.unpackJson();
+            logger.info("Successfully converted json to object");
+            ScenarioCheckerSpecificDepth depther = new ScenarioCheckerSpecificDepth();
+            answer = mainScenario.acceptCheckerStringDepth(depther, depth);
         } catch (IOException e){
             logger.error("Requested scenario does not exist.");
             return "There's no scenario with such name.";

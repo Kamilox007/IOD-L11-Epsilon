@@ -10,6 +10,11 @@ import java.util.ArrayList;
 public class ScenarioCheckerKeywordCounter implements ScenarioChecker{
     private String[] keywords = {"IF","ELSE","FOR EACH"}; //Leave it this way, believe me
 
+    @Override
+    public String visitScenarioString(MainScenario scenario) {
+        return null;
+    }
+
     /**
      * This method is a concrete visitor that executes private function to count steps that begin with one of the keywords.
      *
@@ -26,6 +31,11 @@ public class ScenarioCheckerKeywordCounter implements ScenarioChecker{
      */
     @Override
     public ArrayList<String> visitScenarioArrayList(MainScenario scenario) { return new ArrayList<>(); }
+
+    @Override
+    public String visitScenarioStringDepthVariant(MainScenario scenario, int maxDepth) {
+        return null;
+    }
 
     /**
      * This method iterates through all steps within and counts only those that start with one of the keyword.

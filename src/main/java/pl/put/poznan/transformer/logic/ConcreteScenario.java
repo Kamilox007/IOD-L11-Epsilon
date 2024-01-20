@@ -1,6 +1,7 @@
 package pl.put.poznan.transformer.logic;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ConcreteScenario {
     private ArrayList<Step> steps;
