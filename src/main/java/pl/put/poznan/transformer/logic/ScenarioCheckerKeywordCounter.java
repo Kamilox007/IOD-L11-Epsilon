@@ -43,14 +43,17 @@ public class ScenarioCheckerKeywordCounter implements ScenarioChecker{
      * @param scenario An object that contains a list of all steps.
      * @return number of steps in a scenario that begin with one of the keywords.
      */
-    private int checkKeywords(ConcreteScenario scenario) {
+    public int checkKeywords(ConcreteScenario scenario) {
         int sum = 0;
         for (Step step : scenario.getSteps()) {
             //
             for (String keyword : keywords) {
-                if(step.getContent().startsWith(keyword)) {
-                    sum++;
-                    break;
+                String tmp = step.getContent();
+                if(tmp != null) {
+                    if(tmp.startsWith(keyword)) {
+                        sum++;
+                        break;
+                    }
                 }
             }
             if(step.getSubScenario()!=null) {

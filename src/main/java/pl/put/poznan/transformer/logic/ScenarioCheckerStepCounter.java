@@ -46,7 +46,7 @@ public class ScenarioCheckerStepCounter implements ScenarioChecker {
      * @param scenario An object that contains a list of all steps.
      * @return number of steps in a scenario.
      */
-    private int countSteps(ConcreteScenario scenario) {
+    public int countSteps(ConcreteScenario scenario) {
         ArrayList<Step> stepList = (ArrayList<Step>) scenario.getSteps();
         int sum = 0;
         for (Step step : stepList) {
