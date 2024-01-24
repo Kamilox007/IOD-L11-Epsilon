@@ -2,7 +2,12 @@ package pl.put.poznan.transformer.logic;
 
 import java.util.ArrayList;
 import java.util.Collections;
-
+/**
+ * Class responsible for converting a scenario to a string format.
+ *
+ * @author Epsilon
+ * @version 2.0
+ */
 public class ScenarioCheckerStringReturner implements ScenarioChecker {
     /**
      * A method that returns a scenario as a text, with numbered steps and indents. Uses recursion
@@ -31,11 +36,23 @@ public class ScenarioCheckerStringReturner implements ScenarioChecker {
         return new ArrayList<>();
     }
 
+    /**
+     * Implementing method from the interface
+     */
     @Override
     public String visitScenarioStringDepthVariant(MainScenario scenario, int maxDepth) {
         return null;
     }
 
+    /**
+     * A method that converts a scenario from ConcreteScenario format to string.
+     *
+     * @param scenario An object that contains a list of all steps.
+     * @param superStepNumber number of a parent step (set it to "" when executing)
+     * @param currentNumber number of a step in the current subscenario (set it to 1 when executing)
+     * @param depth current search depth (set it to 0 when executing)
+     * @return converted scenario to a string format
+     */
     public String scenarioToString(ConcreteScenario scenario, String superStepNumber, int currentNumber, int depth) {
         StringBuilder scenarioText = new StringBuilder();
         for (Step step : scenario.getSteps()) {

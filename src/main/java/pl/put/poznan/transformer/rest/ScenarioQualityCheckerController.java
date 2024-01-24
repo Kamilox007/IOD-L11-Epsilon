@@ -10,13 +10,26 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Class responsible for handling spring REST Api
+ *
+ * @author Epsilon
+ * @version 2.0
+ */
+
 @RestController
 @RequestMapping("/scenario")
 public class ScenarioQualityCheckerController {
-
+    /**
+     * Logger for debugging the flow of requests in our app
+     */
     private static final Logger logger = LoggerFactory.getLogger(ScenarioQualityCheckerController.class);
 
-    //TODO: Jak już będą napisane metody to dopisać je do każdej funckji obsługi + dorobić jakieś logi z nimi
+    /**
+     *
+     * @param name name of a .json file that is situated in database folder.
+     * @return a single value that shows how many steps there are in the scenario
+     */
     @RequestMapping(value="/StepCounter/{name}", method = RequestMethod.GET, produces = "application/json")
     public String getSteps(@PathVariable String name) {
         logger.info("Received a 'StepCounter' request, file name: " + name);
@@ -40,6 +53,11 @@ public class ScenarioQualityCheckerController {
         return answer;
     }
 
+    /**
+     *
+     * @param name name of a .json file that is situated in database folder.
+     * @return a string containing numbers and description of all the steps that does not begin with the actor name.
+     */
     @RequestMapping(value="/ActorInStep/{name}", method = RequestMethod.GET, produces = "application/json")
     public String getActors(@PathVariable String name) {
         logger.info("Received a 'ActorInStep' request, file name: " + name);
@@ -61,9 +79,14 @@ public class ScenarioQualityCheckerController {
             logger.error("Requested scenario that is invalid.");
         }
         System.out.println();
-        return answer; // tutaj wstawic odpowiedz metody
+        return answer;
     }
 
+    /**
+     *
+     * @param name name of a .json file that is situated in database folder.
+     * @return a single value that shows how many steps are beginning with the keyword in a scenario
+     */
     @RequestMapping(value="/KeywordCounter/{name}", method = RequestMethod.GET, produces = "application/json")
     public String getKeyword(@PathVariable String name) {
         logger.info("Received a 'KeywordCounter' request, file name: " + name);
@@ -86,6 +109,11 @@ public class ScenarioQualityCheckerController {
         return answer;
     }
 
+    /**
+     *
+     * @param name name of a .json file that is situated in database folder.
+     * @return whole scenario converted to string
+     */
     @RequestMapping(value="/ToString/{name}", method = RequestMethod.GET, produces = "application/json")
     public String getScenarioString(@PathVariable String name) {
         logger.info("Received a 'ToString' request, file name: " + name);
@@ -107,6 +135,12 @@ public class ScenarioQualityCheckerController {
         return answer;
     }
 
+    /**
+     *
+     * @param name name of a .json file that is situated in database folder.
+     * @param depth value determinating how deep in subscenarios we want to descend
+     * @return a scenario as a string with discarded subscenarios after certain depth
+     */
     @RequestMapping(value="/ToStringDepth/{name}/{depth}", method = RequestMethod.GET, produces = "application/json")
     public String getScenarioString(@PathVariable String name, @PathVariable int depth) {
         logger.info("Received a 'ToStringDepth' request, file name: " + name);

@@ -5,7 +5,7 @@ import java.util.ArrayList;
  * Class responsible for counting steps in a scenario that begin with one of the keywords.
  *
  * @author Epsilon
- * @version 1.0
+ * @version 2.0
  */
 public class ScenarioCheckerKeywordCounter implements ScenarioChecker{
     private String[] keywords = {"IF","ELSE","FOR EACH"}; //Leave it this way, believe me

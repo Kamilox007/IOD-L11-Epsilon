@@ -1,7 +1,12 @@
 package pl.put.poznan.transformer.logic;
 
 import java.util.ArrayList;
-
+/**
+ * Class responsible for filtering scenario to a certain depth.
+ *
+ * @author Epsilon
+ * @version 2.0
+ */
 public class ScenarioCheckerSpecificDepth implements ScenarioChecker {
     /**
      * A method that returns a scenario as a text, with numbered steps and indents. Uses recursion
@@ -36,6 +41,17 @@ public class ScenarioCheckerSpecificDepth implements ScenarioChecker {
         return new ArrayList<>();
     }
 
+
+    /**
+     * A method that is responsible for iterating through steps and discarding steps after specific depth is reached.
+     *
+     * @param scenario An object that contains a list of all steps.
+     * @param superStepNumber number of a parent step (set it to "" when executing)
+     * @param currentNumber number of a step in the current subscenario (set it to 1 when executing)
+     * @param depth current search depth (set it to 0 when executing)
+     * @param maxDepth depth to which function is supposed to search
+     * @return scenario without steps after maxDepth in string format
+     */
     public String scenarioToStringDepthVariant(ConcreteScenario scenario, String superStepNumber, int currentNumber, int depth, int maxDepth) {
         if (depth >= maxDepth) {
             return "";

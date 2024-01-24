@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Class responsible for counting steps in a scenario.
  *
  * @author Epsilon
- * @version 1.0
+ * @version 2.0
  */
 public class ScenarioCheckerStepCounter implements ScenarioChecker {
 

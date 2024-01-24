@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Class responsible for counting steps in a scenario that does not begin with an author name.
  *
  * @author Epsilon
- * @version 1.1
+ * @version 2.0
  */
 public class ScenarioCheckerNoActorInStep implements ScenarioChecker{
 
