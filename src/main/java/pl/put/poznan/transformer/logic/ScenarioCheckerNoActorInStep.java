@@ -23,6 +23,17 @@ public class ScenarioCheckerNoActorInStep implements ScenarioChecker{
         listOfActors.addAll(mainScenario.getSystemActors());
         return checkActors(scenario,listOfActors, 1);
     }
+
+    @Override
+    public String visitScenarioStringDepthVariant(MainScenario scenario, int maxDepth) {
+        return null;
+    }
+
+    @Override
+    public String visitScenarioString(MainScenario scenario) {
+        return null;
+    }
+
     /**
      * Implementing method from the interface
      */
