@@ -46,7 +46,7 @@ public class ScenarioCheckerNoActorInStep implements ScenarioChecker{
      * @param scenario An object that contains a list of all steps.
      * @return ArrayList of all incorrect steps with extra index containing number of steps at the end.
      */
-    private ArrayList<String> checkActors(ConcreteScenario scenario, ArrayList<Actor> listOfActors, Integer i) {
+    public ArrayList<String> checkActors(ConcreteScenario scenario, ArrayList<Actor> listOfActors, Integer i) {
         ArrayList<String> stepList = new ArrayList<>();
         for (Step step : scenario.getSteps()) {
             if (lackOfActor(step, listOfActors))
@@ -72,7 +72,7 @@ public class ScenarioCheckerNoActorInStep implements ScenarioChecker{
      */
     private boolean lackOfActor(Step step, ArrayList<Actor> listOfActors){
         for (Actor actor : listOfActors)
-            if (step.getContent().startsWith(actor.getName()))
+            if (step.getContent().startsWith(actor.getName() + " "))
                 return false;
         return true;
     }
